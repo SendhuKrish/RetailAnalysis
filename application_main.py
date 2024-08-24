@@ -5,6 +5,8 @@ from lib.logger import Log4j
 
 if __name__ == '__main__':
 
+    print("inside main")
+    
     if len(sys.argv) < 2:
         print("Please specify the environment")
         sys.exit(-1)
