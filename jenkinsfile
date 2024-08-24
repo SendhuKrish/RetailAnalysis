@@ -6,8 +6,8 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				sh '/bitnami/jenkins/home/.local/bin/pipenv --rm || exit 0'
-				sh '/bitnami/jenkins/home/.local/bin/pipenv install'
+                sh '/home/senthiltk16/.local/share/virtualenvs/bin-9d8Dqc8I/bin/pipenv --rm || exit 0'
+				sh '/home/senthiltk16/.local/share/virtualenvs/bin-9d8Dqc8I/bin/pipenv install'
 			}
 		}
 		stage('Test') {
