@@ -6,13 +6,12 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-                sh '/home/senthiltk16/.local/share/virtualenvs/bin-9d8Dqc8I/bin/pipenv --rm || exit 0'
-				sh '/home/senthiltk16/.local/share/virtualenvs/bin-9d8Dqc8I/bin/pipenv install'
+                echo "build completed"
 			}
 		}
 		stage('Test') {
 			steps {
-				sh '/bitnami/jenkins/home/.local/bin/pipenv run pytest'
+				sh 'pipenv run pytest'
 			}
 		}
 		stage('Package') {
